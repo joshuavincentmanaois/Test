@@ -18,6 +18,7 @@ const closeModalBtn = document.querySelector(".closeModalBtn");
 info.addEventListener("click", showModal);
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+stop.addEventListener("click", stopGame);
 
 function showModal() {
   instructions.classList.toggle("hidden");
@@ -25,8 +26,12 @@ function showModal() {
 }
 
 function closeModal() {
-  modal.classList.add("hidden");
+  instructions.classList.add("hidden");
   overlay.classList.add("hidden");
+}
+
+function stopGame() {
+  location.reload();
 }
 
 // Points Update
